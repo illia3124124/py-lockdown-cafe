@@ -11,7 +11,7 @@ class Cafe:
     def __init__(self, name: str) -> None:
         self.name = name
 
-    def visit_cafe(self, visitor: dict) -> str | None:
+    def visit_cafe(self, visitor: dict) -> str:
         if not visitor.get("vaccine", False):
             raise NotVaccinatedError(f"{visitor.get("name")} must be "
                                      f"vaccinated to enter the cafe.")
